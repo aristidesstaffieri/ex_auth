@@ -23,8 +23,6 @@ defmodule ApiAuth.TodoControllerTest do
   end
 
   def create_session(user) do
-    # in the last blog post I had a copy-paste error
-    # so you may need to use Session.registration_changeset
     Session.registration_changeset(%Session{user_id: user.id}, %{}) |> Repo.insert!
   end
 
